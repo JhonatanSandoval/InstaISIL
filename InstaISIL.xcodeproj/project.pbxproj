@@ -13,6 +13,13 @@
 		B0736202251EC11B004DA1E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0736200251EC11B004DA1E2 /* Main.storyboard */; };
 		B0736204251EC11C004DA1E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0736203251EC11C004DA1E2 /* Assets.xcassets */; };
 		B0736207251EC11C004DA1E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0736205251EC11C004DA1E2 /* LaunchScreen.storyboard */; };
+		B0736211251ECA35004DA1E2 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B073620F251ECA35004DA1E2 /* Nunito-Bold.ttf */; };
+		B0736212251ECA35004DA1E2 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0736210251ECA35004DA1E2 /* Nunito-Regular.ttf */; };
+		B073621E251EDC25004DA1E2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B073621D251EDC25004DA1E2 /* RegisterViewController.swift */; };
+		B0CF4FDE2527FFCA00B9CDF3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF4FDD2527FFCA00B9CDF3 /* LoginViewController.swift */; };
+		B0CF500225280C7B00B9CDF3 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF500125280C7B00B9CDF3 /* UIExtension.swift */; };
+		B0CF500525281D3400B9CDF3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF500425281D3400B9CDF3 /* StringExtension.swift */; };
+		B0CF5008252822A800B9CDF3 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5007252822A800B9CDF3 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		B0736203251EC11C004DA1E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0736206251EC11C004DA1E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0736208251EC11C004DA1E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B073620F251ECA35004DA1E2 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		B0736210251ECA35004DA1E2 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		B073621D251EDC25004DA1E2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B0CF4FDD2527FFCA00B9CDF3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B0CF500125280C7B00B9CDF3 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		B0CF500425281D3400B9CDF3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B0CF5007252822A800B9CDF3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,8 @@
 		B07361F9251EC11B004DA1E2 /* InstaISIL */ = {
 			isa = PBXGroup;
 			children = (
+				B0CF4FD72527FA2400B9CDF3 /* Screens */,
+				B0736214251ECA3A004DA1E2 /* fonts */,
 				B07361FA251EC11B004DA1E2 /* AppDelegate.swift */,
 				B07361FC251EC11B004DA1E2 /* SceneDelegate.swift */,
 				B07361FE251EC11B004DA1E2 /* ViewController.swift */,
@@ -65,6 +81,51 @@
 				B0736208251EC11C004DA1E2 /* Info.plist */,
 			);
 			path = InstaISIL;
+			sourceTree = "<group>";
+		};
+		B0736214251ECA3A004DA1E2 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B073620F251ECA35004DA1E2 /* Nunito-Bold.ttf */,
+				B0736210251ECA35004DA1E2 /* Nunito-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		B0736216251EDBAC004DA1E2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B0736218251EDBDD004DA1E2 /* Register */,
+				B0736217251EDBD8004DA1E2 /* Login */,
+				B0CF500125280C7B00B9CDF3 /* UIExtension.swift */,
+				B0CF500425281D3400B9CDF3 /* StringExtension.swift */,
+				B0CF5007252822A800B9CDF3 /* UIViewControllerExtension.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		B0736217251EDBD8004DA1E2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B0CF4FDD2527FFCA00B9CDF3 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B0736218251EDBDD004DA1E2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B073621D251EDC25004DA1E2 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		B0CF4FD72527FA2400B9CDF3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B0736216251EDBAC004DA1E2 /* Auth */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +185,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0736212251ECA35004DA1E2 /* Nunito-Regular.ttf in Resources */,
 				B0736207251EC11C004DA1E2 /* LaunchScreen.storyboard in Resources */,
 				B0736204251EC11C004DA1E2 /* Assets.xcassets in Resources */,
+				B0736211251ECA35004DA1E2 /* Nunito-Bold.ttf in Resources */,
 				B0736202251EC11B004DA1E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B073621E251EDC25004DA1E2 /* RegisterViewController.swift in Sources */,
+				B0CF500525281D3400B9CDF3 /* StringExtension.swift in Sources */,
+				B0CF500225280C7B00B9CDF3 /* UIExtension.swift in Sources */,
 				B07361FF251EC11B004DA1E2 /* ViewController.swift in Sources */,
+				B0CF5008252822A800B9CDF3 /* UIViewControllerExtension.swift in Sources */,
 				B07361FB251EC11B004DA1E2 /* AppDelegate.swift in Sources */,
+				B0CF4FDE2527FFCA00B9CDF3 /* LoginViewController.swift in Sources */,
 				B07361FD251EC11B004DA1E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
