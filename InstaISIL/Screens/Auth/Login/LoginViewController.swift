@@ -7,16 +7,18 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     @IBOutlet weak var emailUiTextField: UITextField!
     @IBOutlet weak var passwordUiTextField: UITextField!
     @IBOutlet weak var loginUiButton: UIButton!
+    @IBOutlet weak var registerUiLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        styleViews()
+    private var loginViewModel = LoginViewModel()
+    
+    override func initialize() {
+        self.styleViews()
+        self.setupRegisterLabel()
     }
     
     private func styleViews() {
@@ -43,11 +45,32 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            print("logging in ...")
+            self.loginViewModel
+                .login(credentials: Credentials(email: email, password: password),
+                       onSucess: {
+                        print("login was successfull :]")
+                       },
+                       onError: { error in
+                        print("there was an error in the login process ... ")
+                        print(error.debugDescription)
+                       })
             
         }
     }
     
+    private func setupRegisterLabel() {
+        let mainString = "¿No tienes un usuario? Regístrate"
+        let stringToColor = "Regístrate"
+        let range = (mainString as NSString).range(of: stringToColor)
+        
+        let regularText = NSAttributedString(string: mainString, attributes: regularAttr as [NSAttributedString.Key : Any])
+        
+        let newString = NSMutableAttributedString()
+        newString.append(regularText)
+        newString.addAttribute(.foregroundColor, value: UIColor.init(named: "Primary") as Any, range: range)
+        
+        self.registerUiLabel?.attributedText = newString
+    }
 }
 
 extension LoginViewController: UITextFieldDelegate {
@@ -67,4 +90,9 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
     
+}
+
+struct Credentials {
+    var email: String = ""
+    var password: String = ""
 }

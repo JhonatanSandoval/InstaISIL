@@ -11,6 +11,7 @@
 		B0597D76252EAF07008F462C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D75252EAF07008F462C /* RegisterViewModel.swift */; };
 		B0597D79252EAF16008F462C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D78252EAF16008F462C /* ForgotPasswordViewController.swift */; };
 		B0597D7C252EAF44008F462C /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D7B252EAF44008F462C /* ForgotPasswordViewModel.swift */; };
+		B061FB282535478600CE0068 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061FB272535478600CE0068 /* BaseViewController.swift */; };
 		B07361FB251EC11B004DA1E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07361FA251EC11B004DA1E2 /* AppDelegate.swift */; };
 		B07361FD251EC11B004DA1E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07361FC251EC11B004DA1E2 /* SceneDelegate.swift */; };
 		B07361FF251EC11B004DA1E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07361FE251EC11B004DA1E2 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		B0597D75252EAF07008F462C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B0597D78252EAF16008F462C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		B0597D7B252EAF44008F462C /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		B061FB272535478600CE0068 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B07361F7251EC11B004DA1E2 /* InstaISIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaISIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07361FA251EC11B004DA1E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B07361FC251EC11B004DA1E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B0736216251EDBAC004DA1E2 /* Auth */,
+				B061FB272535478600CE0068 /* BaseViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B061FB282535478600CE0068 /* BaseViewController.swift in Sources */,
 				B0597D7C252EAF44008F462C /* ForgotPasswordViewModel.swift in Sources */,
 				B073621E251EDC25004DA1E2 /* RegisterViewController.swift in Sources */,
 				B0597D76252EAF07008F462C /* RegisterViewModel.swift in Sources */,

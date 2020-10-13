@@ -17,4 +17,23 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func setUpBackImage(_ imageView: UIImageView?) {
+        imageView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(back(gesture:))))
+        imageView?.isUserInteractionEnabled = true
+    }
+    
+    @objc private func back(gesture: UIGestureRecognizer) {
+        print("image clicked ...")
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func getBoldAttr() -> UIFont? {
+        return UIFont(name: "Nunito-Bold", size: 14.0)
+    }
+    
+    func getRegularAttr() -> UIFont? {
+        return UIFont(name: "Nunito-Regular", size: 14.0)
+    }
+    
 }
