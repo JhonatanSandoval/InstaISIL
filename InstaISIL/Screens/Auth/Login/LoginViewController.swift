@@ -12,7 +12,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var emailUiTextField: UITextField!
     @IBOutlet weak var passwordUiTextField: UITextField!
     @IBOutlet weak var loginUiButton: UIButton!
-    @IBOutlet weak var registerUiLabel: UILabel!
+    @IBOutlet weak var registerUiButton: UIButton!
     
     private var loginViewModel = LoginViewModel()
     
@@ -46,7 +46,7 @@ class LoginViewController: BaseViewController {
             }
             
             self.loginViewModel
-                .login(credentials: Credentials(email: email, password: password),
+                .login(credentials: UserCredentials(email: email, password: password),
                        onSucess: {
                         print("login was successfull :]")
                        },
@@ -59,18 +59,23 @@ class LoginViewController: BaseViewController {
     }
     
     private func setupRegisterLabel() {
-        let mainString = "¿No tienes un usuario? Regístrate"
+        let stringDefault = "¿No tienes un usuario?"
         let stringToColor = "Regístrate"
-        let range = (mainString as NSString).range(of: stringToColor)
+        let fullString = "\(stringDefault) \(stringToColor)"
+        let defaultRange = (fullString as NSString).range(of: stringDefault)
+        let range = (fullString as NSString).range(of: stringToColor)
         
-        let regularText = NSAttributedString(string: mainString, attributes: regularAttr as [NSAttributedString.Key : Any])
+        let regularText = NSAttributedString(string: fullString, attributes: regularAttr as [NSAttributedString.Key : Any])
         
         let newString = NSMutableAttributedString()
         newString.append(regularText)
+        newString.addAttribute(.foregroundColor, value: UIColor.init(named: "Black") as Any, range: defaultRange)
         newString.addAttribute(.foregroundColor, value: UIColor.init(named: "Primary") as Any, range: range)
         
-        self.registerUiLabel?.attributedText = newString
+        self.registerUiButton?.setAttributedTitle(newString, for: UIControl.State.normal)
+    
     }
+    
 }
 
 extension LoginViewController: UITextFieldDelegate {

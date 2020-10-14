@@ -31,7 +31,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicia tu sesión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvr-ft-0Zv">
                                 <rect key="frame" x="0.0" y="236" width="414" height="21"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electrónico" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-Na-ctG">
@@ -92,20 +92,20 @@
                                     <segue destination="QaQ-YZ-sw9" kind="presentation" id="boo-ei-xVn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¿No tiene un usuario? Regístrate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCc-tE-z6Q">
-                                <rect key="frame" x="60" y="801" width="294" height="26"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
-                                <color key="textColor" name="Gray1"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJJ-y9-Q7H">
+                                <rect key="frame" x="60" y="797" width="294" height="30"/>
+                                <state key="normal" title="¿No tiene un usuario? Regístrate"/>
+                                <connections>
+                                    <segue destination="9rW-XZ-XTb" kind="show" id="mG4-sD-AiH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nCc-tE-z6Q" secondAttribute="bottom" constant="35" id="0Qo-w3-v7l"/>
                             <constraint firstItem="NUu-Qc-jNK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="38X-Yy-247"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oJJ-y9-Q7H" secondAttribute="trailing" constant="60" id="6km-GM-yLq"/>
                             <constraint firstItem="qvr-ft-0Zv" firstAttribute="top" secondItem="3uJ-5g-G1L" secondAttribute="bottom" constant="56" id="7Eg-A8-G4U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nCc-tE-z6Q" secondAttribute="trailing" constant="60" id="C25-aH-uNX"/>
                             <constraint firstItem="3uJ-5g-G1L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K5Y-4u-1No"/>
                             <constraint firstItem="qvr-ft-0Zv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LX7-Rz-bSu"/>
                             <constraint firstItem="3uJ-5g-G1L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LsR-E5-ziO"/>
@@ -116,11 +116,12 @@
                             <constraint firstItem="zBv-Na-ctG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="ckr-ds-xGL"/>
                             <constraint firstItem="1XH-fT-RYk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="dbl-Wm-5pd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TAV-vo-aV5" secondAttribute="trailing" constant="60" id="fvL-Fe-ekQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oJJ-y9-Q7H" secondAttribute="bottom" constant="35" id="nKn-sV-mYB"/>
                             <constraint firstItem="3uJ-5g-G1L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="pcg-ev-jfm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1XH-fT-RYk" secondAttribute="trailing" constant="60" id="q2q-25-gm8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NUu-Qc-jNK" secondAttribute="trailing" constant="60" id="qQ7-32-403"/>
+                            <constraint firstItem="oJJ-y9-Q7H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="qTP-Fe-vfF"/>
                             <constraint firstItem="qvr-ft-0Zv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t66-hQ-7aO"/>
-                            <constraint firstItem="nCc-tE-z6Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="toP-me-y4A"/>
                             <constraint firstItem="TAV-vo-aV5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="xY6-x9-zZr"/>
                             <constraint firstItem="1XH-fT-RYk" firstAttribute="top" secondItem="zBv-Na-ctG" secondAttribute="bottom" constant="15" id="zxx-q9-MB4"/>
                         </constraints>
@@ -130,7 +131,7 @@
                         <outlet property="emailUiTextField" destination="zBv-Na-ctG" id="CcV-6g-oYp"/>
                         <outlet property="loginUiButton" destination="TAV-vo-aV5" id="eCM-m5-y6r"/>
                         <outlet property="passwordUiTextField" destination="1XH-fT-RYk" id="u55-cJ-QQr"/>
-                        <outlet property="registerUiLabel" destination="nCc-tE-z6Q" id="lSR-94-lOY"/>
+                        <outlet property="registerUiButton" destination="oJJ-y9-Q7H" id="Ajl-KW-Hev"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,7 +156,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBA-xz-tL4">
                                 <rect key="frame" x="58" y="22" width="320" height="20"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOZ-1B-dxj">
@@ -188,6 +189,9 @@
                                 <state key="normal" title="Recuperar">
                                     <color key="titleColor" name="Primary"/>
                                 </state>
+                                <connections>
+                                    <action selector="recoveryPassword:" destination="QaQ-YZ-sw9" eventType="touchUpInside" id="rw4-Mw-or6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z1k-e6-iZO"/>
@@ -240,7 +244,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realiza tu registro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ux-pC-rx0">
                                 <rect key="frame" x="0.0" y="163" width="414" height="21"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electrónico" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVN-3I-Jd0">
@@ -388,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTh-No-xqq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603" y="-617"/>
+            <point key="canvasLocation" x="1386" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sZD-az-KQB">
@@ -418,8 +422,8 @@
         <namedColor name="Background">
             <color red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Gray1">
-            <color red="0.51399999856948853" green="0.56499999761581421" blue="0.57999998331069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Black">
+            <color red="0.0" green="0.059000000357627869" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Gray2">
             <color red="0.85500001907348633" green="0.90600001811981201" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

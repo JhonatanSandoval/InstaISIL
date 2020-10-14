@@ -13,10 +13,35 @@ class ForgotPasswordViewController: BaseViewController {
     @IBOutlet weak var forgotLabel: UILabel!
     @IBOutlet weak var emailUiTextField: UITextField!
     
+    private var forgotPasswordViewModel = ForgotPasswordViewModel()
+    
     override func initialize() {
         self.setUpBackImage(self.backImageView)
         self.emailUiTextField?.styleRoundedWithShadow()
         self.setupForgotLabel()
+    }
+    
+    @IBAction func recoveryPassword(_ sender: Any) {
+        print("RECOVERY PASSWORD called -----")
+        self.view?.endEditing(true)
+        let email = emailUiTextField?.text ?? ""
+        
+        if !email.isEmpty {
+            if !email.isValidEmail(.email) {
+                self.showErrorDialog("El correo ingresado no tiene un formato válido")
+                return
+            }
+            
+            self.forgotPasswordViewModel
+                .recovery(credentials: UserCredentials(email: email),
+                          onSuccess: {
+                            
+                          },
+                          onError: { error in
+                            
+                          })
+            
+        }
     }
     
     private func setupForgotLabel() {

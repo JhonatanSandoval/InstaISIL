@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02073B0253680F300C41115 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02073AF253680F300C41115 /* Credentials.swift */; };
 		B0597D72252EAEF4008F462C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D71252EAEF4008F462C /* LoginViewModel.swift */; };
 		B0597D76252EAF07008F462C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D75252EAF07008F462C /* RegisterViewModel.swift */; };
 		B0597D79252EAF16008F462C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D78252EAF16008F462C /* ForgotPasswordViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B02073AF253680F300C41115 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		B0597D71252EAEF4008F462C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B0597D75252EAF07008F462C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B0597D78252EAF16008F462C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				B0597D70252EAEE3008F462C /* ForgotPassword */,
 				B0736218251EDBDD004DA1E2 /* Register */,
 				B0736217251EDBD8004DA1E2 /* Login */,
+				B02073AF253680F300C41115 /* Credentials.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				B07361FF251EC11B004DA1E2 /* ViewController.swift in Sources */,
 				B0CF5008252822A800B9CDF3 /* UIViewControllerExtension.swift in Sources */,
 				B07361FB251EC11B004DA1E2 /* AppDelegate.swift in Sources */,
+				B02073B0253680F300C41115 /* Credentials.swift in Sources */,
 				B0CF4FDE2527FFCA00B9CDF3 /* LoginViewController.swift in Sources */,
 				B07361FD251EC11B004DA1E2 /* SceneDelegate.swift in Sources */,
 				B0597D72252EAEF4008F462C /* LoginViewModel.swift in Sources */,

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class ForgotPasswordViewModel {
+    
+    func recovery(credentials: UserCredentials, onSuccess: @escaping () -> Void, onError: @escaping (Error?) -> Void) {
+        print("call repository ..")
+    }
+    
+}

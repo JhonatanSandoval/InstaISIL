@@ -9,7 +9,7 @@ import Foundation
 
 class LoginViewModel {
     
-    func login(credentials: Credentials, onSucess: @escaping () -> Void, onError: @escaping (Error?) -> Void) {
+    func login(credentials: UserCredentials, onSucess: @escaping () -> Void, onError: @escaping (Error?) -> Void) {
         print("call repostiory ...")
     }
     
